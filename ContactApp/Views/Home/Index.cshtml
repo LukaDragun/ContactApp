@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html ng-app="ContactApp">
+<head>
+    <title>ContactApp</title>
+</head>
+<body>
+
+    <ul class="menu">
+        <a href="/Kontakti"><li>Lista Kontakata</li></a>
+        <a href="/Kontakt/0"><li>Novi Kontakt</li></a>
+    </ul>
+
+    <div ng-view></div>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
+    @Scripts.Render("~/bundles/ContactApp")
+    @Styles.Render("~/Content/css")
+</body>
+</html>

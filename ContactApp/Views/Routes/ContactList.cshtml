@@ -1,0 +1,36 @@
+﻿<div ng-controller="ContactList">
+
+    <form id="searchform" ng-submit="search()">
+        <input type="text" ng-model="text" name="text" />
+        <select ng-model="select" ng-init="select = 1">
+            <option value="{{$index+1}}" ng-repeat="option in options track by $index">{{option}}</option>
+        </select>
+        <input type="submit" value="PRETRAŽI" />
+    </form>
+
+    <table>
+        <tr class ="table1">
+        <th>IME</th>
+        <th>PREZIME</th>
+        <th>ORGANIZACIJA</th>
+        <th>ADRESA</th>
+        <th>EMAIL</th>
+        <th>TEL. BROJEVI</th>
+        <th>TAGOVI</th>
+        </tr>
+        <tr class="table{{$index%2}}" ng-repeat="contact in contacts track by $index">
+            <td>{{contact.name}}</td>
+            <td>{{contact.surname}}</td>
+            <td>{{contact.organization}}</td>
+            <td>{{contact.adress}}</td>
+            <td><span ng-repeat="email in contact.emails track by $index">{{email.val}}<br /></span></td>
+            <td><span ng-repeat="phone in contact.phones track by $index">{{phone.val}}<br /></span></td>
+            <td><span ng-repeat="tag in contact.tags track by $index">{{tag.val}}<br /></span></td>
+            <td><a ng-href="/Kontakt/{{contact.id}}">Pregledaj</a></td>
+            <td><a href="" ng-click="delete(contact.id)">Obriši</a></td>
+        </tr>
+
+    </table>
+    
+
+</div>

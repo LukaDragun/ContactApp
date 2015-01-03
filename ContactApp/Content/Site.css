@@ -1,0 +1,171 @@
+﻿.table0 td
+{
+color:black;
+border:1px solid #4472c4;
+text-align:center;
+background-color:#d9e2f3;
+}
+
+.table1 td
+{
+color:black;
+background-color:white;
+border:1px solid #4472c4;
+text-align:center;
+}
+
+table
+{
+border-spacing:0px;
+border-collapse: collapse;
+width:1000px;
+margin-left:auto;
+margin-right:auto;
+}
+
+table th
+{
+color:white;
+background-color:#4472c4;
+border-left: 1px solid #4472c4;
+border-right: 1px solid #4472c4;
+height:30px;
+text-align:center;
+}
+
+table a
+{
+color:red;
+}
+
+#searchform {
+                width:508px;
+                margin:50px auto;
+}
+#searchform input[type=text]{
+                outline:none;    
+                padding:8px 15px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+}
+#searchform input[type=submit],.contbut {
+                margin-left:-3px;    
+                padding:6px 15px;
+                border:2px solid #4472c4;
+                background-color:#4472c4;
+                color:#fafafa;
+                outline:none; 
+}
+#searchform input[type=submit]:hover,.contbut:hover  {
+                cursor:pointer;
+                background-color:#d9e2f3;
+                color:black;
+}
+
+#searchform select
+{               margin-left:-3px;
+                outline:none;    
+                padding:7px 15px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+}
+
+
+#contactform
+{
+margin:20px auto;
+width:1000px;
+}
+
+#contactform input[type=text] {
+    outline:none;    
+    padding:8px 15px;
+    background:rgba(50, 50, 50, 0.2);
+    border:0px solid #dbdbdb;
+    margin:1px;
+}
+
+.add,.remove {
+    background:url("Images/add.png") no-repeat;
+    cursor:pointer;
+    width: 32px;
+    height: 32px;
+    outline: none;
+    border:none;
+    margin:1px;
+}
+
+.remove {
+    background:url("Images/delete.png") no-repeat;
+    position:relative;
+    top:10px;
+}
+
+.add
+{
+position:relative;
+left:90px;
+}
+
+
+.left
+{
+    float:left;
+}
+
+.second
+{
+margin-left:10px;
+width:239px;
+}
+
+.itemcont
+{
+position:relative;
+margin-bottom:7px;
+top:-11px;
+}
+
+.contbut {
+margin-left:0;
+margin-top:10px;
+}
+
+.menu
+{
+list-style:none;
+width:370px;
+margin:100px auto;
+}
+
+.menu li
+{
+padding:25px 25px;
+border:1px solid #4472c4;
+background-color: #4472c4;
+display:inline;
+}
+
+.menu a
+{
+text-decoration:none;
+font-weight:bold;
+font-size:20px;
+color:white;
+}
+
+.menu a:hover
+{
+color:black;
+}
+
+.menu li:hover
+{
+cursor:pointer;
+background-color:#d9e2f3;
+}
+
+.menu a:active
+{
+color:#4472c4
+}

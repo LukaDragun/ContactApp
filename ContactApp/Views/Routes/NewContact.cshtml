@@ -1,0 +1,41 @@
+﻿<div id="contactform" ng-controller="NewContact">
+    <div class="left">
+        Ime:<br />
+        <input type="text" ng-model="new.name" placeholder="type in name" ng-disabled="change==0&&user!=0" /><br />
+        Prezime:<br />
+        <input type="text" ng-model="new.surname" placeholder="type in surname" ng-disabled="change==0&&user!=0" /><br />
+        Organizacija: <br />
+        <input type="text" ng-model="new.organization" placeholder="type in organization" ng-disabled="change==0&&user!=0" /><br />
+        Adresa: <br />
+        <input type="text" ng-model="new.adress" placeholder="type in adress" ng-disabled="change==0&&user!=0" /><br />
+    </div>
+    <div class="left second">
+        E-mail:<br />
+        <div class="itemcont" ng-repeat="email in new.emails track by $index">
+            <input type="text" ng-model="email.val" placeholder="type in {{$index+1}}. email" ng-disabled="change==0&&user!=0" />
+            <button class="remove" ng-click="removemail($index)" ng-disabled="change==0&&user!=0"></button>
+        </div>
+        <button class="add" ng-click=" addmail()" ng-disabled="change==0&&user!=0"></button><br />
+    </div>
+    <div class="left second">
+        Telefonski brojevi:<br />
+        <div class="itemcont" ng-repeat="phone in new.phones track by $index">
+            <input type="text" ng-model="phone.val" placeholder="type in {{$index+1}}. phone number" ng-disabled="change==0&&user!=0" />
+            <button class="remove" ng-click="removephone($index)" ng-disabled="change==0&&user!=0"></button>
+        </div>
+        <button class="add" ng-click="addphone()" ng-disabled="change==0&&user!=0"></button><br />
+    </div>
+    <div class="left second">
+        Tagovi:<br />
+        <div class="itemcont" ng-repeat="tag in new.tags track by $index">
+            <input type="text" ng-model="tag.val" placeholder="type in {{$index+1}}. tag" ng-disabled="change==0&&user!=0" />
+            <button class="remove" ng-click="removetag($index)" ng-disabled="change==0&&user!=0"></button>
+        </div>
+        <button class="add" ng-click="addtag()" ng-disabled="change==0&&user!=0"></button><br />
+    </div>
+    <div style="clear:both"></div>
+    <button class="contbut" ng-hide="user!=0">ADD</button>
+    <button class="contbut" ng-click="change=change+1" ng-hide="user==0 || change==1">CHANGE</button>
+    <button class="contbut" ng-click="sendtoserver()" ng-hide="user==0 || change==0">ACCEPT</button>
+    <button class="contbut" ng-hide="user==0">DELETE</button>
+ </div>
